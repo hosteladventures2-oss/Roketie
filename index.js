@@ -3,6 +3,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
 const random = require("./Sockets_code/Ranom_function");
+const port = process.env.PORT||3001;
 
 const app = express();
 app.use(cors());
@@ -156,6 +157,6 @@ io.on("connection", (socket) => {
 });
 
 
-server.listen(3001, () => {
-  console.log("Server running on http://localhost:3001");
+server.listen(port, () => {
+  console.log(`Server running on ${port}`);
 });
