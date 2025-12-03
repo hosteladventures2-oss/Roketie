@@ -119,7 +119,7 @@ function startRandomLoop() {
 
    
   
-  currentCountdown = 15;
+  currentCountdown = 10;
 
   
     
