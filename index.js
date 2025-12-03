@@ -17,21 +17,21 @@ const io = new Server(server, {
 });
 
 
-const arr_alt = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 
-14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000, 22000, 23000, 24000, 25000, 26000, 27000, 28000, 29000, 30000, 
-31000, 32000, 33000, 34000, 35000, 36000, 37000, 38000, 39000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000];
+const arr_alt = Math.floor(Math.random() * (80000 - 1000 + 1)) + 1000;
 
-const arr = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 
-14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000, 22000, 23000, 24000, 25000, 26000, 27000, 28000, 29000, 30000, 
-31000, 32000, 33000, 34000, 35000, 36000, 37000, 38000, 39000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000];
+const arr = Math.floor(Math.random() * (80000 - 1000 + 1)) + 1000;
 
-const arr_2 = [500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 70000];
+const arr_2 = Math.floor(Math.random() * (40000 - 500 + 1)) + 500;
 
-const arr_3 = [500, 1000, 2000, 3000, 5000, 6000, 7000, 8000, 9000, 60000];
+const arr_3 = Math.floor(Math.random() * (30000 - 500 + 1)) + 500;;
 
-const arr_4 = [500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 50000];
+const arr_4 = Math.floor(Math.random() * (20000 - 500 + 1)) + 500;;
 
-const arr_5 = [500, 1000, 2000, 3000, 4000, 5000];
+const arr_5 = Math.floor(Math.random() * (10000 - 500 + 1)) + 500;
+
+const arr_6 = Math.floor(Math.random() * (8000 - 500 + 1)) + 500;
+
+const arr_7 = Math.floor(Math.random() * (7000 - 500 + 1)) + 500;
 
 //const arr_6 = [500, 1000, 2000, 3000, 4000];
 
@@ -66,6 +66,17 @@ const set_level = () =>{
     current_array = arr_5
    }
 
+      if(level == 6)
+   {
+    current_array = arr_6
+   }
+
+
+      if(level == 7)
+   {
+    current_array = arr_7
+   }
+
 //console.log(current_array)
 }
 
@@ -90,7 +101,7 @@ const set_level = () =>{
 
 function startRandomLoop() {
 
-  const randomElement = current_array[Math.floor(Math.random() * current_array.length)];
+  const randomElement = current_array;
   currentRandom = randomElement;   // store it
   current_array = arr
   set_level()
@@ -121,7 +132,7 @@ function startRandomLoop() {
         clearInterval(interval);
        
          level ++;
-        if(level >= 6) level = 1;
+        if(level >= 7) level = 1;
         startRandomLoop();
       }
 
