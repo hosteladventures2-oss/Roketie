@@ -29,7 +29,7 @@ const arr_2 = [500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000,
 
 const arr_3 = [500, 1000, 2000, 3000, 5000, 6000, 7000, 8000, 9000, 15000, 30000];
 
-const arr_4 = [500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 12000 20000];
+const arr_4 = [500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 12000, 20000];
 
 const arr_5 = [500, 1000, 2000, 3000, 4000, 5000, 8000, 10000];
 
@@ -37,6 +37,8 @@ const arr_6 = [500, 1000, 2000, 3000, 4000, 5000, 7000];
 
 
 const arr_7 = [500, 1000, 2000, 3000, 4000, 5000];
+
+const arrays = [arr, arr_2, arr_3, arr_4, arr_5, arr_6, arr_7]
 
 //const arr_6 = [500, 1000, 2000, 3000, 4000];
 
@@ -51,36 +53,9 @@ let current_array = []
 
 const set_level = () =>{
 
-   if(level == 2)
-   {
-    current_array = arr_2
-   }
-  
-    if(level == 3)
-   {
-    current_array = arr_3
-   }
+const randomElement_2 = arrays[Math.floor(Math.random() * arrays.length)]
 
-    if(level == 4)
-   {
-    current_array = arr_4
-   }
-   
-    if(level == 5)
-   {
-    current_array = arr_5
-   }
-
-      if(level == 6)
-   {
-    current_array = arr_6
-   }
-
-
-      if(level == 7)
-   {
-    current_array = arr_7
-   }
+current_array = randomElement_2;
 
 //console.log(current_array)
 }
