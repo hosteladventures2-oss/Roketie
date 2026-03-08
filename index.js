@@ -168,6 +168,9 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.status(200).send("OK");
+});
 
 server.listen(port, () => {
   console.log(`Server running on ${port}`);
